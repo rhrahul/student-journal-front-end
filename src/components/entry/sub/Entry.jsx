@@ -76,7 +76,7 @@ const Entry = (props) => {
         </figure>
       </div>
       <div className="mt-4 dark:text-slate-500 text-slate-400 text-xs flex items-center justify-between">
-        <span className="text-xs ">
+        <span className="text-xs flex md:block flex-col">
           last updated by {entry.updatedBy} on{" "}
           <Moment format="DD MMM hh:mm A">{entry.updated_at}</Moment>
         </span>
