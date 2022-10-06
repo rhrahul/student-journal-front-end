@@ -13,7 +13,9 @@ export const fetchEntry = async (id) => {
 };
 
 export const getNewQuote = async () => {
-  const res = await axios.get(`https://zenquotes.io/api/random`);
+  const res = await axios.get(
+    `https://cors-anywhere-407h.onrender.com/https://zenquotes.io/api/random`
+  );
   return res;
 };
 
