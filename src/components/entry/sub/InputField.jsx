@@ -1,7 +1,7 @@
 const InputField = ({ onChange, className, inputProps }) => {
   const { name, label, type } = inputProps;
   const inputClass =
-    "transition w-full border bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-700 rounded-md px-3 py-2 focus:ring-2";
+    "w-full border bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-700 rounded-md px-3 py-2 focus:ring-2";
   return (
     <div className={className}>
       <label

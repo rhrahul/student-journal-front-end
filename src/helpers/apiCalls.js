@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000";
+const API_URL = "https://student-journal-back-end.onrender.com";
 
 export const fetchEntries = async () => {
   const res = await axios.get(`${API_URL}/entry`);
