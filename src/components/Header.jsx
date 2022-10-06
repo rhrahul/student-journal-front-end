@@ -2,17 +2,20 @@ import Icon from "./Icon";
 import { Link } from "react-router-dom";
 import { useTheme, useThemeToggle } from "./ThemeProvider.jsx";
 
+import useWindowDimensions from "../hooks/windowResize";
+
 import { motion } from "framer-motion";
 
 const Header = () => {
   const darkTheme = useTheme();
   const toggleTheme = useThemeToggle();
+  const { height, width } = useWindowDimensions();
 
   return (
     <header className="border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 py-4 sticky top-0">
       <div className="container flex items-center justify-between">
         <h1 className="text-3xl font-bold text-center">
-          <Link to="/">studentJournal</Link>
+          <Link to="/">{width >= 540 ? "studentJournal" : "sJ"}</Link>
         </h1>
         <nav className="flex items-center justify-center font-bold">
           <Link to="/entry" className="mr-5">
